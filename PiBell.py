@@ -4,24 +4,24 @@ from email.mime.text import MIMEText
 
 import datetime
 now = datetime.datetime.now()
-config = open('PiBell.config').readlines()
+
+import os
+import configobj
+file = os.path.expanduser('~/PiBell.config')
+config = configobj.ConfigObj(open(file).read().splitlines())
 
 print "[PiBell] Ding, Dong!!! Doorbell rung."
 
 """
-*!!!*!!!*!!!* 
-NOTE!!!
+ NOTE!!!
  To edit the details (Username, Password and Recipient),
  edit the 'PiBell.config' file
 
  To edit the file, open LXTerminal and type 'leafpad PiBell.config'
-*!!!*!!!*!!!*
 """
-
-
-USERNAME = config[1].strip()
-PASSWORD = config[4].strip()
-RECIPIENT = config[7].strip()
+USERNAME = config['config']['username']
+PASSWORD = config['config']['password']
+RECIPIENT = config['config']['recipient']
 
 
 msg = MIMEText('The doorbell has been rung!' + '\nRung at ' + now.strftime("%H:%M") + ' on ' + now.strftime("%d/%m/%Y") + '\n  ' + '\n--' + '\nSent via PiBell - Made by Sam Smith')

@@ -20,7 +20,7 @@ print "[PiBell] Ding, Dong!!! Doorbell rung."
  To edit the file, open LXTerminal and type 'leafpad PiBell.config'
 """
 try:
-    file = os.path.expanduser('~/PiBell.config___')
+    file = os.path.expanduser('~/PiBell.config')
     config = configobj.ConfigObj(open(file).read().splitlines())
     USERNAME = config['config']['username']
     PASSWORD = config['config']['password']
@@ -29,12 +29,16 @@ except:
 #    traceback.print_exc()
 #    oops = traceback.format_exc()
 #    print(oops)
-    print("                ****** SEVERE PIBELL ERROR!!! ******")
-    print("[PiBell][ERROR] There is an issue with the config file! (Program stopped)")
-    print("[PiBell][ERROR] Make sure that it is in the 'pi' ('home') directory")
-    print("[PiBell][ERROR] Make sure that it is the latest version of the code")
-    print("[PiBell][ERROR] The latest version is on GitHub (http://bit.ly/PiBell_Git/)")
-    print("                ****** SEVERE PIBELL ERROR!!! ******")
+
+    print("""
+                ****** SEVERE PIBELL ERROR!!! ******
+[PiBell][ERROR] There is an issue with the config file! (Program stopped)
+[PiBell][ERROR] Make sure that it is in the 'pi' ('home') directory
+[PiBell][ERROR] Make sure that it is the latest version of the code
+[PiBell][ERROR] The latest version is on GitHub (http://bit.ly/PiBell_Git/)
+                ****** SEVERE PIBELL ERROR!!! ******
+""")
+
     sys.exit(1)
 
 msg = MIMEText('The doorbell has been rung!' + '\nRung at ' + now.strftime("%H:%M") + ' on ' + now.strftime("%d/%m/%Y") + '\n  ' + '\n--' + '\nSent via PiBell - Made by Sam Smith')

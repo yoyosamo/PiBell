@@ -2,9 +2,9 @@ PiBell
 ======
 A [RaspberryPi](http://raspberrypi.org/) powered doorbell
 
-##How to install:
+##Installation:
 
-* - Will be added when finished -
+* [OGPC.com.au](http://ogpc.com.au/wiki/Projects/PiBell)
   
 ##Thanks and Credits
 

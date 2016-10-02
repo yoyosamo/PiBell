@@ -13,5 +13,7 @@ A [RaspberryPi](http://raspberrypi.org/) powered doorbell
 
 ## * Disclaimer *
 The 'PiBell' code and instructions are provided as-is with no warranty or guarantees.
+
 OGPC or the author (Sam Smith) WILL NOT be responsible or liable for ANY damages to your property or yourself - as under [MIT License](/LICENSE.md)
+
 ***USE ONLY AT YOUR OWN RISK!***

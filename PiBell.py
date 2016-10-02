@@ -17,7 +17,6 @@ print "[PiBell] Ding, Dong!!! Doorbell rung."
  To edit the details (Username, Password and Recipient),
  edit the 'PiBell.config' file
 
- To edit the file, open LXTerminal and type 'leafpad PiBell.config'
 """
 try:
     file = os.path.expanduser('~/PiBell.config')

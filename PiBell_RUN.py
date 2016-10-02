@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Code used to have program auto start at boot, as referenced in rc.local
+
 import RPi.GPIO as GPIO
 
 import os
